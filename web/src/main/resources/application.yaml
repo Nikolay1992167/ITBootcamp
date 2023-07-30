@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Truck
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb?currentSchema=userdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: groM16776Mik
+  liquibase:
+    change-log: classpath:liquibase/db.changelog.yaml
+    enabled: true
+    default-schema: userdb
