@@ -1,0 +1,26 @@
+version: '2.19.0'
+
+services:
+  app:
+    build: .
+    container_name: user
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/userdb?currentSchema=userdb
+      - SPRING_DATASOURCE_USERNAME=grom
+      - SPRING_DATASOURCE_PASSWORD=87654321
+      - SPRING_DATASOURCE_ROOT_PASSWORD=groM16776Mik
+    ports:
+      - '8080:8080'
+      - '8081:8081'
+      - '8082:8082'
+
+  db:
+    image: mysql
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=groM16776Mik
+      - MYSQL_DATABASE=userdb
+      - MYSQL_USER=grom
+      - MYSQL_PASSWORD=87654321
