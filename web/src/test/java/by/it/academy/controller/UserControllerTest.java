@@ -82,7 +82,6 @@ class UserControllerTest {
         userResponseSecond.setRole(Role.valueOf("SECURE_API_USER"));
     }
 
-
     @Test
     void testGetUser() throws Exception {
         when(userService.getUserById(1L)).thenReturn(userResponse);
@@ -116,7 +115,6 @@ class UserControllerTest {
                 .andExpect(jsonPath("$.firstname").value("Ivan"));
     }
 
-
     @Test
     void testUpdateUser() throws Exception {
         doNothing().when(userService).updateUser(userUpdateRequest);
@@ -125,7 +123,6 @@ class UserControllerTest {
                 .content(objectMapper.writeValueAsString(userUpdateRequest)))
                 .andExpect(status().isOk());
     }
-
 
     @Test
     void testDeleteUser() throws Exception {

@@ -120,6 +120,4 @@ public class UserIntegrationTest {
         UserResponse existingUser = restTemplate.getForObject(baseUrl + "/1L", UserResponse.class);
         assertNotNull(existingUser);
     }
-
-
 }

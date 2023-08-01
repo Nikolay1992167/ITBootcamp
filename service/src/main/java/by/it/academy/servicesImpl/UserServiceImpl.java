@@ -23,7 +23,6 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
     private final UserRepository userRepository;
 
-
     @Override
     @Transactional(readOnly = true)
     public UserResponse getUserById(Long id) {

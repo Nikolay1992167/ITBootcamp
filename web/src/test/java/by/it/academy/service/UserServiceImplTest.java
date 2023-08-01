@@ -128,7 +128,6 @@ public class UserServiceImplTest {
         verify(userMapper).buildUserResponse(user);
     }
 
-
     @Test
     @DisplayName("Should update User object.")
     public void testUpdateUser() {
