@@ -1,6 +1,7 @@
 package by.it.academy.dto;
 
 import by.it.academy.entities.Role;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -19,7 +20,7 @@ public class UserUpdateRequest {
     private Long id;
 
     @NotNull
-    @Size(max = 3)
+    @Max(150)
     private Integer age;
 
     @NotBlank

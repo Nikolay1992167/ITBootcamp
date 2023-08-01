@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserRequest {
     @NotNull
-    @Size(max = 3)
+    @Max(150)
     private Integer age;
 
     @NotBlank

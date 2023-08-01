@@ -52,7 +52,6 @@ public class AdviceController {
                 )));
         return exceptionBody;
     }
-
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ExceptionBody handleException(){
